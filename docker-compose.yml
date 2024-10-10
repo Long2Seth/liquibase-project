@@ -1,0 +1,48 @@
+services:
+  #  postgres:
+  #    image: postgres:latest
+  #    container_name: postgres_container
+  #    environment:
+  #      POSTGRES_DB: liquibase_db
+  #      POSTGRES_USER: piseth@123
+  #      POSTGRES_PASSWORD: 12345678
+  #    ports:
+  #      - "2345:5432"
+  #    volumes:
+  #      - postgres_data:/var/lib/postgresql/data
+
+
+
+  postgres14:
+    image: postgres:14
+    container_name: postgres14_container
+    environment:
+      POSTGRES_DB: postgres14_db
+      POSTGRES_USER: user14
+      POSTGRES_PASSWORD: password14
+    ports:
+      - "2346:5432"
+    volumes:
+      - postgres14_data:/var/lib/postgresql/data
+
+
+
+
+  postgres16:
+    image: postgres:16
+    container_name: postgres16_container
+    environment:
+      POSTGRES_DB: postgres16_db
+      POSTGRES_USER: user16
+      POSTGRES_PASSWORD: password16
+    ports:
+      - "2347:5432"
+    volumes:
+      - postgres16_data:/var/lib/postgresql/data
+
+
+
+volumes:
+  postgres_data:
+  postgres14_data:
+  postgres16_data:
